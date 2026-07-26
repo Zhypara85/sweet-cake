@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake | Premium Artisan Bakery & Cake Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-cake-candles"></i>
+                <span>Sweet Cake</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#customizer" class="nav-link">Custom Cake</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Open Cart">
+                    <i class="fa-solid fa-shopping-basket"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Handcrafted with Love & Butter</span>
+                <h1 class="hero-title">Baking Your Sweetest Moments to Life</h1>
+                <p class="hero-text">Welcome to Sweet Cake, where artisan craftsmanship meets premium, locally sourced ingredients. Experience heavenly cakes, melt-in-your-mouth pastries, and customizable desserts tailored perfectly for your special celebrations.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                    <a href="#customizer" class="btn btn-secondary">Design Your Cake</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features highlight bar -->
+    <section class="features-bar">
+        <div class="container features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="feature-text">
+                    <h3>100% Organic</h3>
+                    <p>Premium natural ingredients only</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="feature-text">
+                    <h3>Fresh Delivery</h3>
+                    <p>Carefully boxed to your doorstep</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="feature-text">
+                    <h3>Custom Designs</h3>
+                    <p>Tailored exactly to your dreams</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-grid">
+            <div class="about-image-wrapper">
+                <div class="about-img-decor"></div>
+                <!-- CSS drawing/icon or illustrative placeholder for image to make it extremely beautiful even without loaded external images -->
+                <div class="about-placeholder-img">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <div class="sparkle s1"><i class="fa-solid fa-sparkles"></i></div>
+                    <div class="sparkle s2"><i class="fa-solid fa-sparkles"></i></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Since 2015</span>
+                <h2 class="section-title">The Secret Behind Sweet Cake</h2>
+                <p class="about-text">Founded in a cozy corner kitchen, Sweet Cake started with a simple vision: to bring joy and warm memories to every table through beautiful, delicious treats. Every morning, our master pastry chefs select the finest cream, sweetest berries, and rich Belgian chocolate to create culinary wonders.</p>
+                <p class="about-text">Whether you are celebrating a milestone anniversary, a joyful birthday, or simply satisfying a sweet craving, we treat every batch with meticulous precision, passion, and a generous touch of magic.</p>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">12k+</span>
+                        <span class="stat-label">Cakes Delivered</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">45+</span>
+                        <span class="stat-label">Original Recipes</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Happiness Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section with Filtering -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">From Our Ovens</span>
+                <h2 class="section-title text-center">Explore Our Heavenly Menu</h2>
+                <p class="section-subtitle">Choose from our daily-baked specialties. Each dessert is crafted by hand and boxed with extreme care.</p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All Delights</button>
+                <button class="filter-btn" data-category="cakes">Signature Cakes</button>
+                <button class="filter-btn" data-category="cupcakes">Cupcakes</button>
+                <button class="filter-btn" data-category="pastries">Artisan Pastries</button>
+                <button class="filter-btn" data-category="cookies">Gourmet Cookies</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Products will be dynamically generated by JS for robustness, interactivity, and clean architecture, but let's define backup/initial structures too or let script.js completely hydrate them. We will have script.js completely hydrate them so that we can easily manage items, edit prices, etc. -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Custom Cake Customizer -->
+    <section id="customizer" class="customizer-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Interactive Bakery Studio</span>
+                <h2 class="section-title">Design Your Dream Cake</h2>
+                <p class="section-subtitle">Unleash your inner chef! Select your layers, frosting, toppings, and witness your customized creation update in real-time. Add it straight to your cart when ready.</p>
+            </div>
+
+            <div class="customizer-grid">
+                <!-- Left Column: Dynamic Visual Cake Preview -->
+                <div class="customizer-preview-card">
+                    <div class="cake-display" id="cakeDisplay">
+                        <!-- Floor plate of the cake stand -->
+                        <div class="cake-stand">
+                            <div class="stand-top"></div>
+                            <div class="stand-pillar"></div>
+                            <div class="stand-base"></div>
+                        </div>
+
+                        <!-- Sparkles and sprinkles effects container -->
+                        <div class="cake-decorations-overlay" id="decorationsOverlay"></div>
+
+                        <!-- Interactive Cake Cake Layers Container (stacked on top of the stand) -->
+                        <div class="cake-layers-container" id="cakeLayersContainer">
+                            <!-- Layer 3 (Top) -->
+                            <div class="cake-layer layer-top" id="layerTop">
+                                <div class="layer-frosting"></div>
+                                <div class="layer-filling"></div>
+                            </div>
+                            <!-- Layer 2 (Middle) -->
+                            <div class="cake-layer layer-middle" id="layerMiddle">
+                                <div class="layer-frosting"></div>
+                                <div class="layer-filling"></div>
+                            </div>
+                            <!-- Layer 1 (Bottom) -->
+                            <div class="cake-layer layer-bottom" id="layerBottom">
+                                <div class="layer-frosting"></div>
+                                <div class="layer-filling"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-badge" id="previewBadge">Vanilla Buttercream</div>
+                </div>
+
+                <!-- Right Column: Interactive Configuration Form -->
+                <div class="customizer-controls">
+                    <div class="control-group">
+                        <label class="control-label"><i class="fa-solid fa-layer-group"></i> Choose Cake Layers</label>
+                        <div class="radio-tiles">
+                            <label class="radio-tile">
+                                <input type="radio" name="cakeLayers" value="1" class="sr-only">
+                                <div class="tile-content">
+                                    <span class="tile-title">Single Tier</span>
+                                    <span class="tile-price">Base price</span>
+                                </div>
+                            </label>
+                            <label class="radio-tile">
+                                <input type="radio" name="cakeLayers" value="2" checked class="sr-only">
+                                <div class="tile-content">
+                                    <span class="tile-title">Double Tier</span>
+                                    <span class="tile-price">+$15.00</span>
+                                </div>
+                            </label>
+                            <label class="radio-tile">
+                                <input type="radio" name="cakeLayers" value="3" class="sr-only">
+                                <div class="tile-content">
+                                    <span class="tile-title">Triple Tier</span>
+                                    <span class="tile-price">+$25.00</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label"><i class="fa-solid fa-fill-drip"></i> Frosting & Flavor</label>
+                        <div class="flavor-selector" id="flavorSelector">
+                            <!-- Flavor Swatches loaded dynamically/hardcoded for beautiful look -->
+                            <button class="flavor-swatch active" data-flavor="vanilla" data-color="#FFF5EE" data-price="0.00" title="Vanilla Bean (+$0.00)">
+                                <span class="swatch-color" style="background-color: #FFF5EE; border: 1px solid #ddd;"></span>
+                                <span class="swatch-name">Vanilla</span>
+                            </button>
+                            <button class="flavor-swatch" data-flavor="chocolate" data-color="#5C4033" data-price="2.00" title="Belgian Chocolate (+$2.00)">
+                                <span class="swatch-color" style="background-color: #5C4033;"></span>
+                                <span class="swatch-name">Chocolate</span>
+                            </button>
+                            <button class="flavor-swatch" data-flavor="strawberry" data-color="#FFB6C1" data-price="1.50" title="Fresh Strawberry (+$1.50)">
+                                <span class="swatch-color" style="background-color: #FFB6C1;"></span>
+                                <span class="swatch-name">Strawberry</span>
+                            </button>
+                            <button class="flavor-swatch" data-flavor="mint" data-color="#A7F2D1" data-price="2.50" title="Mint Creme (+$2.50)">
+                                <span class="swatch-color" style="background-color: #A7F2D1;"></span>
+                                <span class="swatch-name">Mint</span>
+                            </button>
+                            <button class="flavor-swatch" data-flavor="lemon" data-color="#FFF9A6" data-price="1.00" title="Lemon Zest (+$1.00)">
+                                <span class="swatch-color" style="background-color: #FFF9A6;"></span>
+                                <span class="swatch-name">Lemon</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> Cake Sponge Base</label>
+                        <select class="form-select" id="cakeSponge">
+                            <option value="classic" data-price="0.00">Classic Golden Sponge (+$0.00)</option>
+                            <option value="velvet" data-price="4.00">Rich Red Velvet (+$4.00)</option>
+                            <option value="fudge" data-price="3.00">Dark Chocolate Fudge (+$3.00)</option>
+                            <option value="carrot" data-price="3.50">Spiced Carrot Cake (+$3.50)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label"><i class="fa-solid fa-candy-cane"></i> Gourmet Toppings</label>
+                        <div class="toppings-grid" id="toppingsContainer">
+                            <label class="checkbox-tile">
+                                <input type="checkbox" name="toppings" value="sprinkles" data-price="2.00">
+                                <div class="checkbox-tile-content">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    <span>Rainbow Sprinkles (+$2.00)</span>
+                                </div>
+                            </label>
+                            <label class="checkbox-tile">
+                                <input type="checkbox" name="toppings" value="berries" data-price="4.50">
+                                <div class="checkbox-tile-content">
+                                    <i class="fa-solid fa-apple-whole"></i>
+                                    <span>Fresh Berries (+$4.50)</span>
+                                </div>
+                            </label>
+                            <label class="checkbox-tile">
+                                <input type="checkbox" name="toppings" value="chocochips" data-price="3.00">
+                                <div class="checkbox-tile-content">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <span>Chocolate Chips (+$3.00)</span>
+                                </div>
+                            </label>
+                            <label class="checkbox-tile">
+                                <input type="checkbox" name="toppings" value="goldflakes" data-price="8.00">
+                                <div class="checkbox-tile-content">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>24K Gold Flakes (+$8.00)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Custom Message Banner -->
+                    <div class="control-group">
+                        <label class="control-label" for="cakeMessage"><i class="fa-solid fa-pen-fancy"></i> Custom Piping Message</label>
+                        <input type="text" id="cakeMessage" class="form-input" placeholder="e.g. Happy Birthday Sarah! (Max 30 chars)" maxlength="30">
+                    </div>
+
+                    <!-- Live Price Calculator and Add To Cart button -->
+                    <div class="customizer-pricing">
+                        <div class="price-breakdown">
+                            <span>Base Cake Price: <span id="basePriceLabel">$25.00</span></span>
+                            <span>Upgrades & Add-ons: <span id="addonsPriceLabel">$0.00</span></span>
+                        </div>
+                        <div class="price-total">
+                            Total: <span class="total-price-tag" id="customCakeTotalPrice">$25.00</span>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-large" id="addCustomCakeBtn">
+                            <i class="fa-solid fa-cart-plus"></i> Add Custom Cake to Basket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Sweet Words</span>
+                <h2 class="section-title">What Our Guests Say</h2>
+                <p class="section-subtitle">We are deeply honored to play a small part in your celebrations. Here is some of the feedback we cherish.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-text">"The bespoke double-tier strawberry cream cake we ordered for Emily's graduation was an absolute masterpiece! It was not only gorgeous to look at, but incredibly light, moist, and perfectly sweetened."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-text">"Sweet Cake's interactive online cake customizer is an absolute game-changer. I was able to preview my custom lemon mint frosting combo, order it, and have it delivered perfectly intact. Amazing service!"</p>
+                    <div class="testi-author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+                        <div class="author-info">
+                            <h4>David K.</h4>
+                            <p>Blogger & Foodie</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="testi-text">"The Belgian fudge chocolate cupcakes are out of this world! They are decadent and rich. I order a box of six almost every single week. Highly recommend Sweet Cake for all chocolate lovers."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="author-info">
+                            <h4>Jessica Thorne</h4>
+                            <p>Daily Patron</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Store Info Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info-card">
+                <span class="section-tag">Visit Us</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="contact-intro">Have a special event or need a high-volume catering order? Drop us a line or visit our bakery in person. We'd love to chat over a fresh cup of coffee and a warm croissant!</p>
+
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="detail-text">
+                            <h4>Our Bakery</h4>
+                            <p>42 Sweet Blossom Lane, Dessert District, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="detail-text">
+                            <h4>Opening Hours</h4>
+                            <p>Mon - Sat: 7:00 AM - 8:00 PM<br>Sun: 8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="detail-text">
+                            <h4>Phone & Email</h4>
+                            <p>+1 (555) 123-4567<br>hello@sweetcakebakery.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="newsletter-box">
+                    <h4>Subscribe to Sweet Deals</h4>
+                    <p>Get a 10% discount coupon in your inbox today!</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="form-input" placeholder="Your best email" required>
+                        <button type="submit" class="btn btn-primary">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-card">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email</label>
+                            <input type="email" id="contactEmail" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <select id="contactSubject" class="form-select" required>
+                            <option value="">Choose a subject...</option>
+                            <option value="catering">Custom Catering/Wedding Order</option>
+                            <option value="feedback">General Feedback & Love</option>
+                            <option value="support">Order Status & Inquiries</option>
+                            <option value="other">Something Else</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message</label>
+                        <textarea id="contactMessage" class="form-input" rows="5" placeholder="Tell us about your celebration details or query..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3><i class="fa-solid fa-shopping-basket"></i> Your Dessert Basket</h3>
+            <button class="close-cart-btn" id="closeCartBtn" aria-label="Close Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items Container -->
+        <div class="cart-drawer-body" id="cartItemsContainer">
+            <!-- Dynamically loaded cart items go here -->
+            <div class="empty-cart-message" id="emptyCartMessage">
+                <i class="fa-solid fa-cookie"></i>
+                <p>Your basket is completely empty!</p>
+                <a href="#menu" class="btn btn-secondary btn-sm" id="emptyCartExploreBtn">Shop Our Delights</a>
+            </div>
+        </div>
+
+        <!-- Cart Footer / Summary -->
+        <div class="cart-drawer-footer" id="cartDrawerFooter">
+            <div class="cart-summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Estimated Tax:</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-row total-row">
+                <span>Order Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">
+                Proceed to Secure Checkout <i class="fa-solid fa-circle-check"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Generic Interactive Pop-up Modals / Toast Notification -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="checkoutModal">
+        <div class="modal-header">
+            <h3>Order Successful!</h3>
+            <button class="modal-close" id="modalCloseBtn">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h4>Thank you for choosing Sweet Cake!</h4>
+            <p>Your premium bakery order has been placed successfully.</p>
+            <p class="modal-order-number">Order Reference: <strong id="orderReference">SC-827419</strong></p>
+            <p class="modal-note">Our pastry chef is already pre-heating the oven. We'll send email updates regarding preparation and courier tracking.</p>
+            <button class="btn btn-primary" id="modalSuccessBtn">Bake More Delights!</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification for Add to Cart feedback -->
+    <div class="toast" id="cartToast">
+        <span class="toast-icon"><i class="fa-solid fa-cart-plus"></i></span>
+        <span class="toast-message" id="toastMessage">Item added to your basket!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <span>Sweet Cake</span>
+                </a>
+                <p>Crafting luxurious, handcrafted dessert experiences for special moments, weddings, and premium daily delights since 2015.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#customizer">Custom Cake Studio</a></li>
+                    <li><a href="#testimonials">Customer Reviews</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Our Offerings</h4>
+                <ul>
+                    <li><a href="#menu">Signature Wedding Cakes</a></li>
+                    <li><a href="#menu">Birthday Celebration Cakes</a></li>
+                    <li><a href="#menu">Artisan Pastel Cupcakes</a></li>
+                    <li><a href="#menu">Gluten-Free Selections</a></li>
+                    <li><a href="#menu">Corporate Gift Boxes</a></li>
+                    <li><a href="#menu">Seasonal Holiday Pies</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Sweet Newsletter</h4>
+                <p>Be the first to know about new weekly flavors, secret sales, and seasonal menu launches.</p>
+                <p class="copyright">&copy; 2025 Sweet Cake Bakery. All Rights Reserved. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
