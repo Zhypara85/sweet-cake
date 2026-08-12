@@ -21,19 +21,19 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      # Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
+    
+      
+  
+        
+          
 
-      # Install dependencies
-      - name: Install Dependencies
-        run: npm install
+    
+      
+      
 
-      # Build React/Vite application
-      - name: Build Application
-        run: npm run build
+      
+      
+
 
       # Configure AWS Credentials
       - name: Configure AWS Credentials
