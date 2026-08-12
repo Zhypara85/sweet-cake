@@ -3,7 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      branches:
+  - sweet-cake-website-3363328852652041161
 
 env:
   AWS_REGION: us-east-2
