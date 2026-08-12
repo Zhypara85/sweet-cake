@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      branches:
+      
   - sweet-cake-website-3363328852652041161
 
 env:
